@@ -3,10 +3,10 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGFtaXJwIiwiYSI6ImNqNmtvcjBieTFtOGgzMm52NWQ1N
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/tamirp/cjimm2wsc0e0h2rod6cza0kxb',
-    center: [35.218651,31.7858693],
-    zoom: 17,
     bearing: 27,
-    pitch: 45
+    center: [35.220873,31.780924],
+    zoom: 14.5,
+    pitch: 20
 });
 var chapters;
 var activeChapterName;

@@ -20,6 +20,26 @@ p {
     font-weight: 700;
 }
 
+
+
+a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+}
+
+a:hover {
+    color: #aaa;
+}
+.active a {
+    color: #4264FB;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+}
+
+.active a:hover{
+    color: #144FB8;
+}
 .title {
     font-family: 'Suez One', serif;
     display: block;
@@ -55,10 +75,12 @@ p {
     line-height: 24px;
     letter-spacing: 0.3px;
 }
+
 .body-text-comment {
     letter-spacing: 1px;
     display: block;
 }
+
 .spacer-80 {
     height: 80px;
     display: block;
@@ -68,6 +90,7 @@ p {
     height: 40px;
     display: block;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -80,56 +103,75 @@ body {
     bottom: 0;
 }
 
-
 .intro {
     height: 90vh;
-    background:url("../images/background.jpg");
+    /* background: url("../images/background.jpg"); */
+    background: #4264FB;
     background-size: cover;
     background-attachment: fixed;
-    color:#fff;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     z-index: 1;
     position: relative;
 }
 
+.intro .logo1 {
+    font-family: 'Suez One', serif;
+    font-size: 40px;
+    line-height: 24px;
+    margin-bottom: 40px;
+    letter-spacing: 8px;
+}
 
+.intro  .logo2 {
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 3px;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
 
-    
-    .intro .logo-img img {
-        width:400px;
-        /* filter: blur(20px); */
-        transition: all 0.3s ease-in-out;
-        }
+.intro  .logo3 {
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
 
-        intro.active .logo-img img {
-            /* filter: blur(0px); */
+intro.active .logo-img img {
+    /* filter: blur(0px); */
+}
 
-        }
-        
 .credits {
     height: 200px;
-    background: #4F8CF9;
-    color:#fff;
+    background: #4264FB;
+    color: #fff;
     font-size: 13px;
     line-height: 16px;
     font-family: 'Miriam Libre', sans-serif;
-    font-weight: 400;    
+    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
     direction: rtl;
     z-index: 1;
     position: relative;
+    text-align: center;
 }
+
 .credits b {
-padding: 0 5px;
+    padding: 0 5px;
 }
-.block
-{
+
+.block {
     display: block;
-    padding:0 40px;
+    padding: 0 40px;
 }
 
 #features {
@@ -154,7 +196,7 @@ section {
 }
 
 section.active {
-    color: #4F8CF9;
+    color: #4264FB;
 }
 
 section:last-child {
@@ -162,33 +204,41 @@ section:last-child {
     margin-bottom: 200px;
 }
 
-
-@media only screen and (max-width : 750px) {
-   
+@media only screen and (max-width: 750px) {
     .intro .logo-img img {
-        width:300px;
-        }
-        .block
-        {
-            padding:0 16px;
-        }
+        width: 300px;
+    }
+    .block {
+        padding: 0 16px;
+    }
     #features {
         width: 100%;
         padding-left: 0;
         font-family: sans-serif;
     }
-
     #map {
         width: 100%;
     }
     section {
-        background: none;
+        background: #fff;
+            padding: 24px 16px 60px 16px;
+            margin: 350px 16px 16px 16px;
+            border-radius: 12px;
     }
     #features {
-        background: rgba(255,255,255,0.8);
+        background: rgba(255, 255, 255, 0);
     }
     .spacer-80 {
-        height: 250px;
-        display: block;
+        height: 0px;
     }
+    .artist {
+        margin-bottom: 16px;
     }
+    .body-text { 
+font-size: 14px;
+line-height: 22px;
+    }
+    .intro .logo1 {
+        font-size: 30px;
+    }
+}
