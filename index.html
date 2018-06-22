@@ -1,58 +1,175 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8' />
     <title>Fly to a location based on scroll position</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
- 
+
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='css/style.css' rel='stylesheet' />
 </head>
+
 <body>
 
 
+    <div class='intro'>
+        <div class="logo-img">
+            <img src="images/logo.svg" alt="above and beyond">
+        </div>
+    </div>
+    <div id='map'></div>
+    <div id='features'>
 
-<div id='map'></div>
-<div id='features'>
-    <!-- <section id='baker' class='active'>
-        <h3>221b Baker St.</h3>
-        <p>November 1895. London is shrouded in fog and Sherlock Holmes and Watson pass time restlessly awaiting a new case. "The London criminal is certainly a dull fellow," Sherlock bemoans. "There have been numerous petty thefts," Watson offers in response. Just then a telegram arrives from Sherlock's brother Mycroft with a mysterious case.</p>
-    </section>
-    <section id='aldgate'>
-        <h3>Aldgate Station</h3>
-        <p>Arthur Cadogan West was found dead, head crushed in on train tracks at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich Arsenal on the Bruce-Partington submarine, a secret military project. Plans for the submarine had been stolen and seven of the ten missing papers were found in West's possession. Mycroft implores Sherlock to take the case and recover the three missing papers.</p>
-    </section>
-    <section id='london-bridge'>
-        <h3>London Bridge</h3>
-        <p>Holmes and Watson's investigations take them across London. Sherlock deduces that West was murdered elsewhere, then moved to Aldgate Station to create the illusion that he was crushed on the tracks by a train. On their way to Woolwich Sherlock dispatches a telegram to Mycroft at London Bridge: "Send list of all foreign spies known to be in England, with full address."</p>
-    </section>
-    <section id='woolwich'>
-        <h3>Woolwich Arsenal</h3>
-        <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
-    </section>
-    <section id='gloucester'>
-        <h3>Gloucester Road</h3>
-        <p>Mycroft responds to Sherlock's telegram and mentions several spies. Hugo Oberstein of 13 Caulfield Gardens catches Sherlock's eye. He heads to the nearby Gloucester Road station to investigate and learns that the windows of Caulfield Gardens open over rail tracks where trains stop frequently.</p>
-    </section>
-    <section id='caulfield-gardens'>
-        <h3>13 Caulfield Gardens</h3>
-        <p>Holmes deduces that the murderer placed West atop a stopped train at Caulfield Gardens. The train traveled to Aldgate Station before West's body finally toppled off. Backtracking to the criminal's apartment, Holmes finds a series of classified ads from <em>The Daily Telegraph</em> stashed away. All are under the name Pierrot: "Monday night after nine. Two taps. Only ourselves. Do not be so suspicious. Payment in hard cash when goods delivered."</p>
-    </section>
-    <section id='telegraph'>
-        <h3>The Daily Telegraph</h3>
-        <p>Holmes and Watson head to The Daily Telegraph and place an ad to draw out the criminal. It reads: "To-night. Same hour. Same place. Two taps. Most vitally important. Your own safety at stake. Pierrot." The trap works and Holmes catches the criminal: Colonel Valentine Walter, the brother of Woolwich Arsenal's chief. He confesses to working for Hugo Oberstein to obtain the submarine plans in order to pay off his debts.</p>
-    </section>
-    <section id='charing-cross'>
-        <h3>Charing Cross Hotel</h3>
-        <p>Walter writes to Oberstein and convinces him to meet in the smoking room of the Charing Cross Hotel where he promises additional plans for the submarine in exchange for money. The plan works and Holmes and Watson catch both criminals.</p>
-        <small id="citation">
-            Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
-        </small>
-    </section> -->
-</div>
+            <section id='v0' class="active">
+                    <div class="spacer-80"></div>
+                    <span class='title'>מעל ומעבר</span>
+                    <p class='artist'>יצחק מזרחי</p>
+                    <p class='body-text'>
+                            דמיינו לעצמכם שרק גרם מדרגות מפריד ביניכם לבין עיר שמיימית. כזו שמתקיימת בגובה הרקיע, למעלה, על גגות הבניינים. דמיינו עיר עתיד הפוכה, שבה הגג הוא מצע לפנטזיה, מרחב פעולה לשדים ולרוחות השמיים. מקום שבו אפשר להביט אל הארכיאולוגיה של העתיד, לשרטט מחדש את קו הרקיע של העיר.<br><br>
+                            עכשיו עיזבו את מפלס הרחוב המוכר וטפסו איתנו מעל ומעבר. היכנסו, קיץ שני ברציפות, אל מרחב שחומק מתודעתנו, אך תמיד נמצא שם, מעלינו. למשך עשרה ימים, במרכז ירושלים, נפתח לכם דלת אל חללים נטושים שבדרך כלל נעולים בפנינו. נציע לכם לצלול אל עיר–על מדומיינת שעל גגותיה, שישקיפו אלה על אלה, יחכו לכם עבודות אמנות.<br><br>
+                            שם למעלה תוכלו לשוטט בתוך סביבה לילית רוחשת, להקשיב לנהמות פסנתרים ומכונות ולבהות בשקט השמים. התערוכה הזמנית שאנחנו אוצרים על הגגות תציע לכם שלושה מקבצים, בכל אחד מהם שני גגות. אנחנו ממליצים לנסות לתפוס לפחות שני מקבצים בערב, מפצירים בכם לבוא יותר מערב אחד, ומזכירים שכל זה מחכה לכם שם גבוה, על הגג, מה שאומר שצריך להתנתק ממפלס הרחוב, לשנס ברכיים ולטפס.<br><br>
+                            הצטרפו אלינו למסע שמבקש לפקוח את התודעה, לקיים מציאות חדשה. הצטרפו לעיר אלטרנטיבית שתוקם יש מאין מעל לכאן 
+                    </p>
+                </section>
+        <section id='v1'>
+            <div class="spacer-80"></div>
 
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
-<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
-<script src='js/index.js'></script>
+            <span class='location-title'>
+                <i class="material-icons px-16-icons">location_on</i>
+                <b>רחוב שטראוס 17</b> בניין ההסתדרות</span>
+            <span class='title'>שורש 2 – ממותות על הגג</span>
+            <p class='artist'>מאיה דוניץ</p>
+            <p class='body-text'>חמש חיות ענק עתיקות, רובצות על גג הבניין כמו שרידים מעולם קדום, רועמות, שואגות ורוטטות דרך גופי פסנתרים. הפסנתר
+                על 88 הקלידים שלו יכול להעמיד פנים שהוא כל יצור בעולם. לבוש בהסוואה זו, יצרה מאיה דוניץ את משפחת הממותות
+                – אלה פסנתרים שבורים והרוסים, אשר קיבלו חיים חדשים ונולדו שוב כבני כלאיים של טכנולוגיות ישנות וחדשות. בני
+                משפחת הפסנתר מייצרים סוואנת צלילים, משפיעים הדדית אחד על השני בניסיון חסר ערך להגיע לנקודת האמצע שביניהם
+                - האמצע שבין הצלילים. המבקרים מוזמנים לחקור את העבודה דרך גופם, בישיבה או בשכיבה, לגעת בבהמות השואגות ולחוות
+                את הרעידות דרך כל חושיהם. עבודת הסאונד-סקייפ המורכבת חוקרת את היקום של הפעימות, יוצרת תופעות פסיכו-אקוסטיות
+                אשר מאפשרות להקשיב לקולות בין הצלילים, קולות אשר קיימים כל הזמן סביבנו אך בדרך כלל נותרים חבויים מעבר לתחושתנו.
+            </p>
+
+            <div class="spacer-40"></div>
+            <span class='title'>האזור האסור - ירושלים</span>
+            <p class='artist'>חגית קיסר</p>
+            <p class='body-text'>
+                ״אזור אסור לטיסה״ חולש על העיר העתיקה ועל רדיוס של כשני קילומטרים מסביב לה, ומוגדר על ידי רשות התעופה האזרחית כ- ״ LLP11
+                האזור האסור 'הר הבית' בירושלים״. עיגול אדום מסומן על המפה ובמרכזו הר הבית - טבורו של מרחב היסטורי, פוליטי
+                ודתי. העיגול האדום מסמן את האזור שבו לרשויות הפיקוח ישנה שליטה בלעדית במרחב האווירי, האזור בו אסור לאזרחים
+                לייצר "מבט על" - להסתכל מלמעלה על המרחב בו הם חיים. העבודה ממפה את ה"אזור האסור" ועוסקת בו לא רק כטכנולוגיית
+                שיטור אלא גם כמושג המאפשר להתחקות אחר תנאי הנראות המרחביים בעיר, להגיב אליהם ולהתערב בהם. הסימון של "האזור
+                האסור" כחלק מהנוף מאפשר לנו לדמיין את המרחב, את המורכבות והריבוי שבו, את האנשים וחיי היומיום שנצבעו באדום
+                תחת הגדרה של רשויות הפיקוח.
+            </p>
+
+        </section>
+
+
+        <section id='v2'>
+            <div class="spacer-80"></div>
+
+            <span class='location-title'>
+                <i class="material-icons px-16-icons">location_on</i>
+                <b>רחוב שטראוס 5 פינת הנביאים</b> ביקור חולים</span>
+            <span class='title'>אני רוצה לבקש (שוב) סליחה</span>
+            <p class='artist'>עלית קרייז</p>
+            <p class='body-text'>
+                בבניין בית החולים ההיסטורי הזה נולדים בכל יום בממוצע, 16 תינוקות חדשים לאוויר העולם. סיור אוזניות בשיתוף קהל על גג בית החולים,
+                מאפשר לשהות למשך חצי שעה נדירה על גג המבנה הייחודי ובליבו של דופק בקיעת החיים. אילו סליחות היינו רוצים לבקש
+                מהתינוקות שנולדים לתוך מציאות ירושלמית- ישראלית- עכשווית, על צומת הרחובות הכי צפופה ורב תרבותית בעיר? אילו
+                סליחות היינו רוצים לבקש מסביבתנו, מעצמנו, ברגע נדיר של התעלות? העלייה אל הגג מאפשרת לרחף לרגע מעל המציאות
+                היומיומית, לנשום, להרחיב את נקודת המבט ולראות את המכלול. בבקשות הסליחה הנלחשות על אוזנו של המאזין, שזורים
+                פרטים היסטוריים על המקום, לצד הרהורים פרטיים ומחשבות על אחריותנו לבחירות שאנו עושים המכתיבות את המציאות לתוכה
+                אנו מביאים חיים.
+            </p>
+
+        </section>
+
+        <section id='v3'>
+            <div class="spacer-80"></div>
+
+            <span class='location-title'>
+                <i class="material-icons px-16-icons">location_on</i>
+                <b>רחוב יפו 34</b> פינת הלני המלכה</span>
+            <span class='title'>להשלים טקסט</span>
+            <p class='artist'>עופר לאופר</p>
+            <p class='body-text'>
+                להשלים טקסט
+            </p>
+        </section>
+
+        <section id='v4'>
+            <div class="spacer-80"></div>
+
+            <span class='location-title'>
+                <i class="material-icons px-16-icons">location_on</i>
+                <b>רחוב יפו 10</b>
+            </span>
+            <span class='title'>שלושה</span>
+            <p class='artist'>אדם ויינוגרד</p>
+            <p class='body-text'>
+                שלושה מונולוגים נוקבים מאפשרים לעצום את העיניים ולעבור דרך קירות, לחדור באמצעות הקול אל תוך בית החולים הצרפתי 'סנט לואיס'
+                – הוספיס לחולים סופניים - הנמצא ממש כאן, מעבר לכביש. בבית החולים 50 מיטות. מדי שבוע? אדם אחד מת בו. במקום
+                שבו המוות הוא חוויית קיום, אי אפשר שלא להישיר אליו מבט. שלושה מטפלים מתוך בית החולים, העובדים בו מזה שנים
+                רבות, מדברים בכנות על החיים ועל המתים, על הסוף, על פחד, פרידה והתפייסות, על מה שישנו ומה שאיננו , על הרווח
+                הדק שבין למעלה -למטה, על רגעים של התעלות.
+            </p>
+
+            <div class="spacer-40"></div>
+            <span class='title'>שמים</span>
+            <p class='artist'>איתמר מנדס פלור</p>
+            <p class='body-text'>
+                על סף הגג, בתוך אובייקט שגבולותיו נמוגים אל הרקיע, הנוף מתאיין, המרחב נגוז, הצופה מוזמן לצלול לבדו לתוך חלל התבודדות שמיימי.
+                האובייקט שמשתרג כמו צמח מתוך הארכיטקטורה של הגג מאבד את גבולותיו ומשקף ?190 מעלות של שמי העיר. את תמונת הנוף
+                האייקונית של ירושלים על קו התפר, מחליף המבט המופנם, המתבונן אל תוך תהום השמים, אל תוך עצמו. השאיפה לעלות
+                גבוה יותר, לראות רחוק יותר, לתפוס את המכלול מותמרת בכוחה של עצם ההתבוננות.
+                <span class='body-text-comment'>
+                    העלייה אל חלל ההתבודדות בסולם, לצופה יחיד.
+                </span>
+            </p>
+
+        </section>
+        <section id='v5'>
+            <div class="spacer-80"></div>
+
+            <span class='location-title'>
+                <i class="material-icons px-16-icons">location_on</i>
+                <b>רחוב יפו 17</b>
+            </span>
+            <span class='title'>להשלים טקסט</span>
+            <p class='artist'>טליה קנינן וגיא שרף</p>
+            <p class='body-text'>
+                להשלים טקסט
+            </p>
+
+        </section>
+        <section id='v6'>
+            <div class="spacer-80"></div>
+
+            <span class='location-title'>
+                <i class="material-icons px-16-icons">location_on</i>
+                <b>שלמה המלך 11</b> מלון ממילא</span>
+            <span class='title'>להשלים טקסט</span>
+            <p class='artist'>רועי כרמלי</p>
+            <p class='body-text'>
+                להשלים טקסט
+                <span class='body-text-comment'>
+                    אין עלית קהל, מביטים מגג יפו 10 + 17
+                </span>
+            </p>
+
+        </section>
+    </div>
+    <div class='credits'>
+        <div class="block">
+                <b> ניהול אמנותי ואוצרות: </b> יהודית שלוסברג יוגב, יצחק מזרחי ∙ <b> מפיקים ראשיים: </b> איילת גבעוני, יאיר מילנוב ∙ <b> ליווי אמנותי: </b> שגית מזמר ∙ <b> עיצוב גרפי ופיתוח: </b> תמיר פומרנץ
+        </div>
+    </div>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
+    <script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
+    <script src='js/index.js'></script>
 </body>
+
 </html>

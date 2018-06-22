@@ -2,9 +2,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGFtaXJwIiwiYSI6ImNqNmtvcjBieTFtOGgzMm52NWQ1N
 
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [-0.15591514, 51.51830379],
-    zoom: 15.5,
+    style: 'mapbox://styles/tamirp/cjimm2wsc0e0h2rod6cza0kxb',
+    center: [35.218651,31.7858693],
+    zoom: 17,
     bearing: 27,
     pitch: 45
 });
@@ -15,14 +15,14 @@ $.getJSON("model/mapData.json", function (data) {
     console.log('loaded data!');
     chapters = data;
     activeChapterName = Object.keys(chapters)[0];
-    console.log(activeChapterName);
-    for (var k in chapters) {
-        if (chapters.hasOwnProperty(k)) {
-            //  alert("Key is " + k + ", value is" + chapters[k]);
-            $("#features").append("<section id='" + k + "'><h3>" + k + "</h3><p>foo</p></section>");
+    // activeChapterName = "";
+    // for (var k in chapters) {
+    //     if (chapters.hasOwnProperty(k)) {
+    //         //  alert("Key is " + k + ", value is" + chapters[k]);
+    //         // $("#features").append("<section id='" + k + "'><span class='title'>" + chapters[k].title + "</span><p class='body-text'>"+chapters[k].text+"</p></section>");
 
-        }
-    }
+    //     }
+    // }
 });
 
 
@@ -54,5 +54,6 @@ function setActiveChapter(chapterName) {
 function isElementOnScreen(id) {
     var element = document.getElementById(id);
     var bounds = element.getBoundingClientRect();
-    return bounds.top < window.innerHeight && bounds.bottom > 0;
+    console.log("id:"+id+",bounds.top:" + bounds.top + ",window.innerHeight:"+window.innerHeight+",bounds.bottom:"+bounds.bottom);
+    return (bounds.top - (window.innerHeight/2)) < window.innerHeight && bounds.bottom > (window.innerHeight/2);
 }

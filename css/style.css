@@ -1,29 +1,194 @@
-body { margin:0; padding:0; }
-#map { position:absolute; top:0; bottom:0; width:100%; }
+p {
+    margin: 0;
+    padding: 0;
+}
 
+@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400|Miriam+Libre:400,700|Suez+One&subset=hebrew');
+.location-title {
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    margin-bottom: 32px;
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 2px solid;
+}
+
+.location-title b {
+    font-weight: 700;
+}
+
+.title {
+    font-family: 'Suez One', serif;
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    line-height: 40px;
+    margin-bottom: 4px;
+}
+
+.px-16-icons {
+    font-size: 16px;
+    line-height: 18px;
+    position: relative;
+    top: 2px;
+}
+
+.artist {
+    font-family: 'Miriam Libre', sans-serif;
+    display: block;
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 20px;
+    margin-bottom: 32px;
+}
+
+.body-text {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    display: block;
+    max-width: 430px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+}
+.body-text-comment {
+    letter-spacing: 1px;
+    display: block;
+}
+.spacer-80 {
+    height: 80px;
+    display: block;
+}
+
+.spacer-40 {
+    height: 40px;
+    display: block;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
 
 #map {
     position: fixed;
-    width:50%;
+    width: 50%;
+    top: 0;
+    bottom: 0;
 }
+
+
+.intro {
+    height: 90vh;
+    background:url("../images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+
+
+
+    
+    .intro .logo-img img {
+        width:400px;
+        /* filter: blur(20px); */
+        transition: all 0.3s ease-in-out;
+        }
+
+        intro.active .logo-img img {
+            /* filter: blur(0px); */
+
+        }
+        
+.credits {
+    height: 200px;
+    background: #4F8CF9;
+    color:#fff;
+    font-size: 13px;
+    line-height: 16px;
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 400;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+    z-index: 1;
+    position: relative;
+}
+.credits b {
+padding: 0 5px;
+}
+.block
+{
+    display: block;
+    padding:0 40px;
+}
+
 #features {
     width: 50%;
-    margin-left: 50%;
+    padding-left: 50%;
     font-family: sans-serif;
     overflow-y: scroll;
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
+    z-index: 1;
+    position: relative;
 }
+
 section {
-    padding:  25px 50px;
-    line-height: 25px;
-    border-bottom: 1px solid #ddd;
-    opacity: 0.25;
+    padding: 25px 50px;
+    color: #ccc;
     font-size: 13px;
+    display: block;
+    /* min-height: 600px; */
+    direction: rtl;
+    background: #fefefe;
+    transition: all 0.3s ease-in-out;
 }
+
 section.active {
-    opacity: 1;
+    color: #4F8CF9;
 }
+
 section:last-child {
     border-bottom: none;
     margin-bottom: 200px;
 }
+
+
+@media only screen and (max-width : 750px) {
+   
+    .intro .logo-img img {
+        width:300px;
+        }
+        .block
+        {
+            padding:0 16px;
+        }
+    #features {
+        width: 100%;
+        padding-left: 0;
+        font-family: sans-serif;
+    }
+
+    #map {
+        width: 100%;
+    }
+    section {
+        background: none;
+    }
+    #features {
+        background: rgba(255,255,255,0.8);
+    }
+    .spacer-80 {
+        height: 250px;
+        display: block;
+    }
+    }
