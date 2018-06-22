@@ -205,6 +205,10 @@ section:last-child {
 }
 
 @media only screen and (max-width: 750px) {
+    .intro {
+        height: 600px;
+    }
+
     .intro .logo-img img {
         width: 300px;
     }
