@@ -3,11 +3,18 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGFtaXJwIiwiYSI6ImNqNmtvcjBieTFtOGgzMm52NWQ1N
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/tamirp/cjimm2wsc0e0h2rod6cza0kxb',
-    bearing: 27,
+    bearing: 150,
     center: [35.220873,31.780924],
     zoom: 14.5,
-    pitch: 20
+    pitch: 230
 });
+
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
+
+
+
 var chapters;
 var activeChapterName;
 
@@ -15,14 +22,11 @@ $.getJSON("model/mapData.json", function (data) {
     console.log('loaded data!');
     chapters = data;
     activeChapterName = Object.keys(chapters)[0];
-    // activeChapterName = "";
-    // for (var k in chapters) {
-    //     if (chapters.hasOwnProperty(k)) {
-    //         //  alert("Key is " + k + ", value is" + chapters[k]);
-    //         // $("#features").append("<section id='" + k + "'><span class='title'>" + chapters[k].title + "</span><p class='body-text'>"+chapters[k].text+"</p></section>");
+if (isMobileDevice() || window.innerWidth<600) {
+    console.log('here!')
+    document.getElementById('map').setAttribute('style', 'height:'+(window.innerHeight+56)+'px;');
 
-    //     }
-    // }
+}
 });
 
 

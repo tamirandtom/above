@@ -1,10 +1,10 @@
 {
     "v0": {
         "duration": 3000,
-        "bearing": 27,
+        "bearing": 150,
         "center": [35.220873,31.780924],
         "zoom": 15,
-        "pitch": 20
+        "pitch": 230
     },
     "v1": {
         "duration": 3000,

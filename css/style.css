@@ -212,6 +212,11 @@ section:last-child {
     .intro .logo-img img {
         width: 300px;
     }
+    #v0 {
+        background: #4264FB;
+        color:#fff;
+        padding: 24px 16px 40px 16px;        
+    }
     .block {
         padding: 0 16px;
     }
@@ -225,7 +230,7 @@ section:last-child {
     }
     section {
         background: #fff;
-            padding: 24px 16px 60px 16px;
+            padding: 24px 16px 40px 16px;
             margin: 350px 16px 16px 16px;
             border-radius: 12px;
     }
