@@ -309,6 +309,9 @@ section:last-child {
         font-size: 14px;
         line-height: 22px;
     }
+    .title {
+        line-height: 28px;
+    }
     .intro .logo1 {
         font-size: 30px;
     }
