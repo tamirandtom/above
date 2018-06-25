@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>מעל ומעבר</title>
-        <meta name="description" content="TODO">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta property="og:title" content="TODO" />
-        <meta property="og:site_name" content="TODO" />
-        <meta property="og:description" content="TODO" />
-        <meta property="og:image" content="TODO" />
-        <meta property="og:image:url" content="TODO" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:url" content="TODO" />
-        <link rel="icon" href="/favicon.ico?v=1.2">
-        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Miriam+Libre:400,700|Suez+One" rel="stylesheet">
-        <link href='css/style.css' rel='stylesheet' />
-    </head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>מעל ומעבר</title>
+    <meta name="description" content="TODO">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta property="og:title" content="TODO" />
+    <meta property="og:site_name" content="TODO" />
+    <meta property="og:description" content="TODO" />
+    <meta property="og:image" content="TODO" />
+    <meta property="og:image:url" content="TODO" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:url" content="TODO" />
+    <link rel="icon" href="/favicon.ico?v=1.2">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Miriam+Libre:400,700|Suez+One" rel="stylesheet">
+    <link href='css/style.css' rel='stylesheet' />
+</head>
 
 
 <body>
@@ -30,28 +31,38 @@
 
     <div class='intro'>
         <!-- <div class="logo-img"> -->
-                <div class="logo0"><div class="circle shadow-animation"></div></div>
-            <div class="logo1 shadow-animation-invert">—מֵעַל וּמֵעֵבֶר—</div>
-            <div class="logo2">אמנות, רוחות ושדים על גגות ירושלים</div>
-            <div class="logo3">8–16.8.2018 - 19:00-23:00</div>
-            <!-- <img src="images/logo.svg" alt="above and beyond"> -->
+        <div class="logo0">
+            <div class="circle shadow-animation"></div>
+        </div>
+        <div class="logo1 shadow-animation-invert">—מֵעַל וּמֵעֵבֶר—</div>
+        <div class="logo2">אמנות, רוחות ושדים על גגות ירושלים</div>
+        <div class="logo3">8–16.8.2018 - 19:00-23:00</div>
+        <!-- <img src="images/logo.svg" alt="above and beyond"> -->
         <!-- </div> -->
     </div>
     <div id='map'></div>
     <div id='features'>
 
-            <section id='v0' class="active">
-                    <div class="spacer-80"></div>
-                    <span class='title'>מעל ומעבר</span>
-                    <p class='body-text'>
-                            דמיינו לעצמכם שרק גרם מדרגות מפריד ביניכם לבין עיר שמיימית. כזו שמתקיימת בגובה הרקיע, למעלה, על גגות הבניינים. דמיינו עיר עתיד הפוכה, שבה הגג הוא מצע לפנטזיה, מרחב פעולה לשדים ולרוחות השמיים. מקום שבו אפשר להביט אל הארכיאולוגיה של העתיד, לשרטט מחדש את קו הרקיע של העיר.<br><br>
-                            עכשיו עיזבו את מפלס הרחוב המוכר וטפסו איתנו מעל ומעבר. היכנסו, קיץ שני ברציפות, אל מרחב שחומק מתודעתנו, אך תמיד נמצא שם, מעלינו. למשך עשרה ימים, במרכז ירושלים, נפתח לכם דלת אל חללים נטושים שבדרך כלל נעולים בפנינו. נציע לכם לצלול אל עיר–על מדומיינת שעל גגותיה, שישקיפו אלה על אלה, יחכו לכם עבודות אמנות.<br><br>
-                            שם למעלה תוכלו לשוטט בתוך סביבה לילית רוחשת, להקשיב לנהמות פסנתרים ומכונות ולבהות בשקט השמים. התערוכה הזמנית שאנחנו אוצרים על הגגות תציע לכם שלושה מקבצים, בכל אחד מהם שני גגות. אנחנו ממליצים לנסות לתפוס לפחות שני מקבצים בערב, מפצירים בכם לבוא יותר מערב אחד, ומזכירים שכל זה מחכה לכם שם גבוה, על הגג, מה שאומר שצריך להתנתק ממפלס הרחוב, לשנס ברכיים ולטפס.<br><br>
-                            הצטרפו אלינו למסע שמבקש לפקוח את התודעה, לקיים מציאות חדשה. הצטרפו לעיר אלטרנטיבית שתוקם יש מאין מעל לכאן 
-                    </p>
-                    <br><br>
-                    <p class='artist'>יצחק מזרחי</p>
-                </section>
+        <section id='v0' class="active">
+            <div class="spacer-80"></div>
+            <span class='title'>מעל ומעבר</span>
+            <p class='body-text'>
+                דמיינו לעצמכם שרק גרם מדרגות מפריד ביניכם לבין עיר שמיימית. כזו שמתקיימת בגובה הרקיע, למעלה, על גגות הבניינים. דמיינו עיר
+                עתיד הפוכה, שבה הגג הוא מצע לפנטזיה, מרחב פעולה לשדים ולרוחות השמיים. מקום שבו אפשר להביט אל הארכיאולוגיה
+                של העתיד, לשרטט מחדש את קו הרקיע של העיר.
+                <br>
+                <br> עכשיו עיזבו את מפלס הרחוב המוכר וטפסו איתנו מעל ומעבר. היכנסו, קיץ שני ברציפות, אל מרחב שחומק מתודעתנו,
+                אך תמיד נמצא שם, מעלינו. למשך עשרה ימים, במרכז ירושלים, נפתח לכם דלת אל חללים נטושים שבדרך כלל נעולים בפנינו.
+                נציע לכם לצלול אל עיר–על מדומיינת שעל גגותיה, שישקיפו אלה על אלה, יחכו לכם עבודות אמנות.
+                <br>
+                <br> שם למעלה תוכלו לשוטט בתוך סביבה לילית רוחשת, להקשיב לנהמות פסנתרים ומכונות ולבהות בשקט השמים. התערוכה הזמנית
+                שאנחנו אוצרים על הגגות תציע לכם שלושה מקבצים, בכל אחד מהם שני גגות. אנחנו ממליצים לנסות לתפוס לפחות שני מקבצים
+                בערב, מפצירים בכם לבוא יותר מערב אחד, ומזכירים שכל זה מחכה לכם שם גבוה, על הגג, מה שאומר שצריך להתנתק ממפלס
+                הרחוב, לשנס ברכיים ולטפס.
+                <br>
+                <br> הצטרפו אלינו למסע שמבקש לפקוח את התודעה, לקיים מציאות חדשה. הצטרפו לעיר אלטרנטיבית שתוקם יש מאין מעל לכאן
+            </p>
+        </section>
         <section id='v1'>
             <div class="spacer-80"></div>
 
@@ -114,7 +125,14 @@
             <p class='artist'>עופר לאופר</p>
             <span class='title'>להשלים טקסט</span>
             <p class='body-text'>
-                להשלים טקסט
+                מעל עולם הרחוב ומחוץ לתודעה העירונית מתקיימים להם מרחבי הגגות - אזורי שוליים אולטימטיביים, שטחי תפעול מוזנחים, מרחבי סכנה
+                רחוקים מעינו הפקוחה של החוק.
+                <br> חמש מכונות עומדות על הגג, יורקות את חומרי הגלם של הבניין, יוצרות סביבת מחייה אקולוגית-תעשייתית, פני שטח
+                מצטבר לתשתית קיום חדשה. תזמורת המכונות פועלת כמו להקה בסביבה ארכיטקטונית - זפת, חול, מים, אבן גיר, נפלטים
+                מהן בפעולה מתריסה של חוסר שליטה, תוך ניסיון בלתי פוסק להתפתח.
+                <br> בתוך המרחב הבראשיתי-תעשייתי הזה מתהפכות היוצרות –יסודות הבניין מתפרקים, המכונה מאבדת שליטה, חומרי הגלם נפלטים,
+                בית הגידול התעשייתי מזמין את צופיו להיחשף, תוך נקיטת אמצעי הזהירות הדרושים, להצטברות שכבות הבניין על פני
+                השטח, לרגעי הייצור של הארכיאולוגיה של העתיד.
             </p>
         </section>
 
@@ -170,9 +188,13 @@
                 <i class="material-icons px-16-icons">location_on</i>
                 <b>מלון ממילא</b> שלמה המלך 11</a>
             <p class='artist'>רועי כרמלי</p>
-            <span class='title'>להשלים טקסט</span>
+            <span class='title'>Beacon 2.0</span>
             <p class='body-text'>
-                להשלים טקסט
+                בטופוגרפיה של העיר מדמים גגות הבניינים את פסגות ההרים שבטבע - נקודות גבוהות על קו הרקיע, דרכן ניתן לאותת מסר למרחקים.  מבט אל הנוף מנקודת התצפית של הגג, חושף מדורת ניאון חיה, משואת איתות דיגיטלית, פרשנות עכשווית לפעולה פשוטה ובסיסית מן העבר; מלחמה, הודעה על הזמן (מולד הלבנה), חג מתקרב או בקשת סיוע – קודדו  לסימנים מוסכמים, אמצעי לתקשורת בין קבוצות 
+<br>
+רחוקות שחולקות גורל משותף. מדורת הניאון מתרגמת את התנועה הכאוטית של האש החיה לקוד ממוחשב, מקימה לתחייה באמצעים דיגיטליים טקס עירוני קדום.
+<br>
+
                 <span class='body-text-comment'>
                     אין עלית קהל, מביטים מגג יפו 10 + 17
                 </span>
@@ -182,7 +204,10 @@
     </div>
     <div class='credits'>
         <div class="block">
-                <b> ניהול אמנותי ואוצרות: </b> יהודית שלוסברג יוגב, יצחק מזרחי ∙ <b> מפיקים ראשיים: </b> איילת גבעוני, יאיר מילנוב ∙ <b> ליווי אמנותי: </b> שגית מזמר ∙ <b> עיצוב גרפי ופיתוח: </b> תמיר פומרנץ
+            <b> ניהול אמנותי ואוצרות: </b> יהודית שלוסברג יוגב, יצחק מזרחי ∙
+            <b> מפיקים ראשיים: </b> איילת גבעוני, יאיר מילנוב ∙
+            <b> ליווי אמנותי: </b> שגית מזמר ∙
+            <b> עיצוב גרפי ופיתוח: </b> תמיר פומרנץ
         </div>
     </div>
 

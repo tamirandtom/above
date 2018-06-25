@@ -8,44 +8,44 @@
     },
     "v1": {
         "duration": 3000,
-        "bearing": 27,
-        "center": [35.218651,31.7858693],
-        "zoom": 17,
-        "pitch": 2
+        "bearing": -142,
+        "center": [35.218995,31.786027],
+        "zoom": 17.5,
+        "pitch": 40
     },
     "v2": {
         "duration": 3000,
-        "center": [35.218815,31.784014],
-        "bearing": 150,
-        "zoom": 17,
-        "pitch": 2
+        "center": [35.218750,31.784055],
+        "bearing": -172,
+        "zoom": 18,
+        "pitch": 50
     },
     "v3": {
         "duration": 3000,
-        "bearing": 150,
-        "center": [35.221165,31.781180],
-        "zoom": 18,
-        "pitch": 40
+        "bearing": 108,
+        "center": [35.220841,31.781235],
+        "zoom": 17,
+        "pitch": 20
     },
     "v4": {
         "duration": 3000,
-        "bearing": 150,
-        "center": [35.224540,31.779339],
-        "zoom": 17,
-        "pitch": 50
+        "bearing": 68,
+        "center": [35.224369,31.779421],
+        "zoom": 18,
+        "pitch": 40
     },
     "v5": {
-        "bearing": 80,
+        "bearing": -32,
         "duration": 3000,
-        "center": [35.224325,31.779118],
-        "zoom": 17,
+        "center": [35.224732,31.778830],
+        "zoom": 18.2,
         "pitch": 50
     },
     "v6": {
-        "bearing": 150,
-        "center": [35.223532,31.778097],
+        "bearing": 1508,
+        "center": [35.223508,31.778106],
         "zoom": 17,
         "duration": 3000,
-        "pitch": 40
+        "pitch": 7
     }
 }
