@@ -9,6 +9,13 @@ var map = new mapboxgl.Map({
     pitch: 230
 });
 
+map.addControl(new mapboxgl.GeolocateControl({
+    positionOptions: {
+        enableHighAccuracy: true
+    },
+    trackUserLocation: true
+}));
+
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
@@ -29,8 +36,19 @@ if (isMobileDevice() || window.innerWidth<600) {
 }
 });
 
+var mapToggle = false
+$( "#toggle-map" ).on( "click", function() {
+    if (mapToggle)
+    {
+        $( "#toggle-map" ).removeClass('on');
+        $("#features").removeClass('disabled');
+    } else {
+        $( "#toggle-map" ).addClass('on');
+        $("#features").addClass('disabled');
+    }
+    mapToggle = !mapToggle;
 
-
+  });
 // On every scroll event, check which element is on screen
 window.onscroll = function () {
     if (chapters) {
