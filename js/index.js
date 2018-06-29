@@ -79,3 +79,16 @@ function isElementOnScreen(id) {
     // console.log("id:"+id+",bounds.top:" + bounds.top + ",window.innerHeight:"+window.innerHeight+",bounds.bottom:"+bounds.bottom);
     return (bounds.top - (window.innerHeight/2)) < window.innerHeight && bounds.bottom > (window.innerHeight/2);
 }
+
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 500);
+    }
+
+});

@@ -271,7 +271,50 @@ section:last-child {
 #toggle-map {
     display: none;
 }
-@media only screen and (max-width: 750px) {
+
+
+/* TOC
+ */
+.toc-link {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.toc-link .toc-artist-name  {
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 18px;
+    margin-bottom: 8px;
+    color: #4264FB;
+}
+
+
+.toc-link .toc-artist-work  {
+    font-family: 'Miriam Libre', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 18px;
+    margin-bottom: 8px;
+    color: #4264FB;
+}
+
+.toc-link .toc-location {
+    font-family: 'Suez One', serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 18px;
+    margin-bottom: 8px;
+    color: #4264FB;
+    opacity: 0.4;
+}
+
+
+
+ @media only screen and (max-width: 750px) {
     #toggle-map {
         width: 56px;
         height: 56px;
@@ -350,4 +393,28 @@ section:last-child {
     section:last-child {
         padding-bottom: 40px;
     }
+
+    /* toc */
+
+    .toc-link {
+        margin-top: 8px;
+    }
+    .toc-link .toc-artist-name  {
+        color:#fff;
+
+    }
+    
+    
+    .toc-link .toc-artist-work  {
+        color:#fff;
+
+    }
+    
+    .toc-link .toc-location {
+      color:#fff;
+      margin-top: 16px;
+    }
+
+.title-spacer {
+opacity: 0;}
 }
