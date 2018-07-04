@@ -94,7 +94,8 @@ a:hover {
 body {
     margin: 0;
     padding: 0;
-    background: #4264FB;
+    background: linear-gradient(47deg, #3206D9 0%, #3960F3 83%);
+    ;
 }
 
 #map {
@@ -107,7 +108,7 @@ body {
 .intro {
     height: 90vh;
     /* background: url("../images/background.jpg"); */
-    background: #4264FB;
+    background: linear-gradient(47deg, #3206D9 0%, #3960F3 83%);
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
@@ -138,7 +139,7 @@ body {
     margin: 32px;
     /* background: #fff; */
     display: inline-block;
-    border:2px solid #4264FB;
+    /* border:2px solid #4264FB; */
 }
 @keyframes moveinv {
     0% {

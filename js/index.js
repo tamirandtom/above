@@ -1,5 +1,9 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoidGFtaXJwIiwiYSI6ImNqNmtvcjBieTFtOGgzMm52NWQ1Nnc1NTkifQ.CxOvrXtNgryGkkgXkiShsQ';
 
+var chapters;
+var activeChapterName;
+
+// Set up map
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/tamirp/cjimm2wsc0e0h2rod6cza0kxb',
@@ -16,15 +20,6 @@ map.addControl(new mapboxgl.GeolocateControl({
     trackUserLocation: true
 }));
 
-function isMobileDevice() {
-    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-};
-
-
-
-var chapters;
-var activeChapterName;
-
 $.getJSON("model/mapData.json", function (data) {
     console.log('loaded data!');
     chapters = data;
@@ -32,23 +27,9 @@ $.getJSON("model/mapData.json", function (data) {
 if (isMobileDevice() || window.innerWidth<600) {
     console.log('here!')
     document.getElementById('map').setAttribute('style', 'height:'+(window.innerHeight+56)+'px;');
-
 }
 });
 
-var mapToggle = false
-$( "#toggle-map" ).on( "click", function() {
-    if (mapToggle)
-    {
-        $( "#toggle-map" ).removeClass('on');
-        $("#features").removeClass('disabled');
-    } else {
-        $( "#toggle-map" ).addClass('on');
-        $("#features").addClass('disabled');
-    }
-    mapToggle = !mapToggle;
-
-  });
 // On every scroll event, check which element is on screen
 window.onscroll = function () {
     if (chapters) {
@@ -65,25 +46,22 @@ window.onscroll = function () {
 
 function setActiveChapter(chapterName) {
     if (chapterName === activeChapterName) return;
-
     map.flyTo(chapters[chapterName]);
     document.getElementById(chapterName).setAttribute('class', 'active');
     document.getElementById(activeChapterName).setAttribute('class', '');
-
     activeChapterName = chapterName;
 }
 
+// return element bottom bounds relative to screen
 function isElementOnScreen(id) {
     var element = document.getElementById(id);
     var bounds = element.getBoundingClientRect();
-    // console.log("id:"+id+",bounds.top:" + bounds.top + ",window.innerHeight:"+window.innerHeight+",bounds.bottom:"+bounds.bottom);
     return (bounds.top - (window.innerHeight/2)) < window.innerHeight && bounds.bottom > (window.innerHeight/2);
 }
 
+// Scroll animation for inner links
 $('a[href^="#"]').on('click', function(event) {
-
     var target = $( $(this).attr('href') );
-
     if( target.length ) {
         event.preventDefault();
         $('html, body').animate({
@@ -92,3 +70,22 @@ $('a[href^="#"]').on('click', function(event) {
     }
 
 });
+
+// Toggle map button
+var mapToggle = false
+$( "#toggle-map" ).on( "click", function() {
+    if (mapToggle)
+    {
+        $( "#toggle-map" ).removeClass('on');
+        $("#features").removeClass('disabled');
+    } else {
+        $( "#toggle-map" ).addClass('on');
+        $("#features").addClass('disabled');
+    }
+    mapToggle = !mapToggle;
+  });
+
+// Check if mobile device
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
