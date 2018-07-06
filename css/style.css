@@ -91,7 +91,7 @@ a:hover {
     display: block;
 }
 
-body {
+body,html {
     margin: 0;
     padding: 0;
     background: linear-gradient(47deg, #3206D9 0%, #3960F3 83%);
@@ -370,6 +370,7 @@ section:last-child {
         padding: 24px 16px 40px 16px;
         margin: 350px 16px 16px 16px;
         border-radius: 12px;
+        border-top: 4px solid #4264FB;
     }
     #features {
         background: rgba(255, 255, 255, 0);
