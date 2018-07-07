@@ -21,22 +21,26 @@ p {
 
 a {
     color: #ccc;
+    text-shadow: 0 0 0 #ccc;
     text-decoration: none;
     transition: all 0.2s ease-out;
 }
 
 a:hover {
     color: #aaa;
+    text-shadow: 0 0 0 #aaa;
 }
 
 .active a {
     color: #4264FB;
+    text-shadow: 0 0 0 #4264FB;
     text-decoration: none;
     transition: all 0.2s ease-out;
 }
 
 .active a:hover {
     color: #144FB8;
+    text-shadow: 0 0 0 #144FB8;
 }
 
 .title {
@@ -112,6 +116,7 @@ body,html {
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
+    text-shadow: 0 0 0 #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -196,6 +201,7 @@ body,html {
     line-height: 18px;
     margin-bottom: 8px;
     color: rgba(0,0,0,0.6);
+    text-shadow: 0 0 0 #000;
 }
 
 .intro .logo3 {
@@ -206,6 +212,8 @@ body,html {
     line-height: 18px;
     margin-bottom: 8px;
     color: rgba(0,0,0,0.6);
+    text-shadow: 0 0 0 #000;
+
 }
 
 intro.active .logo-img img {
@@ -216,6 +224,7 @@ intro.active .logo-img img {
     height: 200px;
     background: #4264FB;
     color: #fff;
+    text-shadow: 0 0 0 #fff;
     font-size: 13px;
     line-height: 16px;
     font-family: 'Miriam Libre', sans-serif;
@@ -253,6 +262,7 @@ intro.active .logo-img img {
 section {
     padding: 25px 50px;
     color: #ccc;
+    text-shadow: 0 0 0 #ccc;
     font-size: 13px;
     display: block;
     /* min-height: 600px; */
@@ -263,6 +273,7 @@ section {
 
 section.active {
     color: #4264FB;
+    text-shadow: 0 0 0 #4264FB;
 }
 
 section:last-child {
@@ -290,6 +301,7 @@ section:last-child {
     line-height: 18px;
     margin-bottom: 8px;
     color: #4264FB;
+    text-shadow: 0 0 0 #4264FB;
 }
 
 
@@ -301,6 +313,7 @@ section:last-child {
     line-height: 18px;
     margin-bottom: 8px;
     color: #4264FB;
+    text-shadow: 0 0 0 #4264FB;
 }
 
 .toc-link .toc-location {
@@ -310,6 +323,7 @@ section:last-child {
     line-height: 18px;
     margin-bottom: 8px;
     color: #4264FB;
+    text-shadow: 0 0 0 #4264FB;
     opacity: 0.4;
 }
 
@@ -322,6 +336,7 @@ section:last-child {
         border-radius: 50%;
         background: #4264FB;
         color:#fff;
+        text-shadow: 0 0 0 #fff;
         box-shadow: 0px 8px 24px 2px rgba(0,0,0,0.20);
         display: inline-block;
         bottom:24px;
@@ -334,6 +349,7 @@ section:last-child {
     }
     #toggle-map.on {
     color:rgba(255,255,255,0.5);
+    text-shadow: 0 0 0 #ccc;
     }
     .intro {
         height: 600px;
@@ -344,6 +360,7 @@ section:last-child {
     #v0 {
         background: #4264FB;
         color: #fff;
+        text-shadow: 0 0 0 #fff;
         padding: 24px 16px 40px 16px;
     }
     .block {
@@ -403,17 +420,20 @@ section:last-child {
     }
     .toc-link .toc-artist-name  {
         color:#fff;
+        text-shadow: 0 0 0 #fff;
 
     }
     
     
     .toc-link .toc-artist-work  {
         color:#fff;
+        text-shadow: 0 0 0 #fff;
 
     }
     
     .toc-link .toc-location {
       color:#fff;
+      text-shadow: 0 0 0 #fff;
       margin-top: 16px;
     }
 
