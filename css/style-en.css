@@ -1,0 +1,18 @@
+body {
+    background: #fff;
+}
+
+#features {
+    padding-left:  0px;
+    padding-right:  50%;
+}
+
+#map {
+ right: 0px;   
+}
+
+section {
+    direction: ltr;
+    max-width: 600px;
+    margin-left: auto;
+}
