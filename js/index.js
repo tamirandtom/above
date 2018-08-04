@@ -113,3 +113,58 @@ $( "#toggle-map" ).on( "click", function() {
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
+
+
+$( ".lang-he" ).on( "click", function() {
+    switchHE();
+});
+
+$( ".lang-en" ).on( "click", function() {
+    switchEN();
+});
+
+$( ".lang-ar" ).on( "click", function() {
+    switchAR();
+});
+
+function switchEN() {
+    $( ".translateable" ).each(function( index ) {
+        if ( $( this ).hasClass( "translateable-ar" )) {
+            $( this ).addClass('inactiveLang');
+           }
+           if ( $( this ).hasClass( "translateable-he" )) {
+            $( this ).addClass('inactiveLang');
+           }
+           if ( $( this ).hasClass( "translateable-en" )) {
+            $( this ).removeClass('inactiveLang');
+           }
+      });
+};
+
+function switchHE() {
+    $( ".translateable" ).each(function( index ) {
+        if ( $( this ).hasClass( "translateable-ar" )) {
+            $( this ).addClass('inactiveLang');
+           }
+           if ( $( this ).hasClass( "translateable-he" )) {
+            $( this ).removeClass('inactiveLang');
+           }
+           if ( $( this ).hasClass( "translateable-en" )) {
+            $( this ).addClass('inactiveLang');
+           }
+      });
+};
+
+function switchAR() {
+    $( ".translateable" ).each(function( index ) {
+        if ( $( this ).hasClass( "translateable-ar" )) {
+            $( this ).removeClass('inactiveLang');
+           }
+           if ( $( this ).hasClass( "translateable-he" )) {
+            $( this ).addClass('inactiveLang');
+           }
+           if ( $( this ).hasClass( "translateable-en" )) {
+            $( this ).addClass('inactiveLang');
+           }
+      });
+};
