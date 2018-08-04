@@ -114,6 +114,7 @@ function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
+switchHE();
 
 $( ".lang-he" ).on( "click", function() {
     switchHE();
