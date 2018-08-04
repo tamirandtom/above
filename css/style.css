@@ -1,3 +1,28 @@
+
+.font-credits {
+    font-family: 'Miriam Libre', 'Cairo', sans-serif;
+    font-weight: 400;
+}
+.font-credits b {
+font-weight: 700;
+}
+.toggle-language {
+    position: absolute;
+    z-index: 20;
+    top: 0px;
+    padding: 24px;
+    color: #fff;
+
+    font-family: 'Miriam Libre', 'Cairo', sans-serif;
+    font-size: 14px;
+
+}
+.toggle-language  a {
+    color: #fff;
+}
+.toggle-language  a:hover {
+    color: #fff;
+}
 p {
     margin: 0;
     padding: 0;
@@ -81,8 +106,17 @@ a:hover {
 }
 
 .body-text-comment {
-    letter-spacing: 1px;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    font-size: 10px;
+    margin-top: 24px;
     display: block;
+    font-family: 'Miriam Libre', 'Cairo', sans-serif;
+    font-weight: 400;
+    max-width: 500px;
+}
+.body-text-comment b  {
+    font-weight: 700;
 }
 
 .spacer-80 {
@@ -202,6 +236,7 @@ body,html {
     margin-bottom: 8px;
     color: rgba(0,0,0,0.6);
     text-shadow: 0 0 0 #000;
+    text-align: center;
 }
 
 .intro .logo3 {
@@ -227,7 +262,6 @@ intro.active .logo-img img {
     text-shadow: 0 0 0 #fff;
     font-size: 13px;
     line-height: 16px;
-    font-family: 'Miriam Libre', sans-serif;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -330,6 +364,17 @@ section:last-child {
 
 
  @media only screen and (max-width: 750px) {
+
+
+    .location-title
+    {
+border-bottom: none;
+
+    }
+    .toggle-language {
+text-align: center;
+width: 100%;
+    }
     #toggle-map {
         width: 56px;
         height: 56px;
@@ -343,7 +388,6 @@ section:last-child {
         right: 24px;
         position: fixed;
         z-index: 3;
-        transition: all 1s ease-in-out;
         line-height: 56px;
         text-align: center;
     }
@@ -405,6 +449,7 @@ section:last-child {
     }
     .title {
         line-height: 28px;
+        margin-bottom: 24px;
     }
     .intro .logo1 {
         font-size: 30px;

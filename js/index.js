@@ -29,6 +29,13 @@ if (isMobileDevice() || window.innerWidth<600) {
     document.getElementById('map').setAttribute('style', 'height:'+(window.innerHeight+56)+'px;');
 }
 });
+var buttonTrigger = false;
+if (isMobileDevice()) {
+    buttonTrigger = true;
+}
+
+var isButtonOn = false;
+$( "#toggle-map" ).hide(200);
 
 // On every scroll event, check which element is on screen
 window.onscroll = function () {
@@ -41,6 +48,23 @@ window.onscroll = function () {
                 break;
             }
         }
+    }
+  
+    if ($(window).scrollTop() > 200 && buttonTrigger) { 
+        if (!isButtonOn)
+        {
+            console.log('show!');
+            $( "#toggle-map" ).show(200);
+            isButtonOn=!isButtonOn;
+        }
+    } else {
+        if (isButtonOn)
+{
+    console.log('hide');
+    $( "#toggle-map" ).hide(200);
+    isButtonOn=!isButtonOn;
+}
+        
     }
 };
 
