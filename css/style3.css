@@ -4,6 +4,19 @@
     top:-1px;
 }
 
+.toggle-language span 
+
+{
+    cursor: pointer;
+    transition: color 0.2s linear;
+}
+
+
+.toggle-language span:hover 
+
+{
+    color:#C2D7FD;
+}
 
 .inactiveLang {
 opacity: 0.06;
