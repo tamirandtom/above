@@ -404,7 +404,9 @@ section:last-child {
 
 
  @media only screen and (max-width: 750px) {
-
+    .inactiveLang {
+        opacity: 0;
+        }
 
     .location-title
     {
