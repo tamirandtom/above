@@ -34,9 +34,6 @@ if (isMobileDevice()) {
     buttonTrigger = true;
 }
 
-var isButtonOn = false;
-$( "#toggle-map" ).hide(200);
-
 // On every scroll event, check which element is on screen
 window.onscroll = function () {
     if (chapters) {
@@ -48,23 +45,6 @@ window.onscroll = function () {
                 break;
             }
         }
-    }
-  
-    if ($(window).scrollTop() > 200 && buttonTrigger) { 
-        if (!isButtonOn)
-        {
-            console.log('show!');
-            $( "#toggle-map" ).show(200);
-            isButtonOn=!isButtonOn;
-        }
-    } else {
-        if (isButtonOn)
-{
-    console.log('hide');
-    $( "#toggle-map" ).hide(200);
-    isButtonOn=!isButtonOn;
-}
-        
     }
 };
 
