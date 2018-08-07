@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cairo:400,700|Lalezar|Markazi+Text:400,600');
-
+.translateable-ar {
+    letter-spacing: 0px !important;
+}
 .title.translateable.translateable-ar {
     top:-1px;
 }
@@ -539,4 +541,16 @@ opacity: 0;
 .inactiveLang {
     display: none;
     }
+}
+
+
+
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) 
+{ 
+  
+    .inactiveLang {
+        display: none;
+        }
+    
 }
