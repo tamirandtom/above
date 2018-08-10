@@ -1,4 +1,8 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoidGFtaXJwIiwiYSI6ImNqNmtvcjBieTFtOGgzMm52NWQ1Nnc1NTkifQ.CxOvrXtNgryGkkgXkiShsQ';
+$( document ).ready(function() {
+  
+  
+  
+  mapboxgl.accessToken = 'pk.eyJ1IjoidGFtaXJwIiwiYSI6ImNqNmtvcjBieTFtOGgzMm52NWQ1Nnc1NTkifQ.CxOvrXtNgryGkkgXkiShsQ';
 
 var chapters;
 var activeChapterName;
@@ -19,6 +23,30 @@ map.addControl(new mapboxgl.GeolocateControl({
     },
     trackUserLocation: true
 }));
+
+
+function getLocation() {
+    if (navigator.geolocation) {
+        console.log('got position!');
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        console.log('no position :(');
+    }
+}
+
+function showPosition(position) {
+
+    map.flyTo({
+        "duration": 2000,
+        "bearing": -142,
+        "center": [position.coords.longitude,position.coords.latitude],
+        "zoom": 17.5,
+        "pitch": 40
+    });
+}
+
+
+
 
 $.getJSON("model/mapData.json", function (data) {
     console.log('loaded data!');
@@ -83,6 +111,7 @@ $( "#toggle-map" ).on( "click", function() {
         $( "#toggle-map" ).removeClass('on');
         $("#features").removeClass('disabled');
     } else {
+        getLocation();
         $( "#toggle-map" ).addClass('on');
         $("#features").addClass('disabled');
     }
@@ -152,3 +181,4 @@ function switchAR() {
 
 
 
+});
